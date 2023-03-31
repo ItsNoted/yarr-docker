@@ -9,7 +9,7 @@ It is written in Go with the frontend in Vue.js. The storage is backed by SQLite
 
 ## usage
 
-Docker Compose
+This is an exact fork of the original yarr repo I cloned and built the Docker image to create it myself. Feel free to use the Docker Compose below.
 
 ```
 version: '3.3'
