@@ -10,25 +10,17 @@ It is written in Go with the frontend in Vue.js. The storage is backed by SQLite
 ## usage
 
 The latest prebuilt binaries for Linux/MacOS/Windows are available
-[here](https://github.com/nkanaev/yarr/releases/latest).
 
-### macos
-
-Download `yarr-*-macos64.zip`, unzip it, place `yarr.app` in `/Applications` folder, [open the app][macos-open].
-
-[macos-open]: https://support.apple.com/en-gb/guide/mac-help/mh40616/mac
-
-### windows
-
-Download `yarr-*-windows64.zip`, unzip it, open `yarr.exe`
-
-### linux
-
-Download `yarr-*-linux64.zip`, unzip it, place `yarr` in `$HOME/.local/bin`
-and run [the script](etc/install-linux.sh).
-
-For self-hosting, see `yarr -h` for auth, tls & server configuration flags.
-For building from source code, see [build.md](build.md)
+```
+version: '3.3'
+services:
+    yarr:
+        ports:
+            - '7070:7070'
+        volumes:
+            - '/docker/yarr:/data'
+        image: itsnoted/yarr
+```
 
 ## credits
 
